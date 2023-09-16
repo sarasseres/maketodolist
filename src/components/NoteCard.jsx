@@ -31,14 +31,14 @@ export const NoteCard = ({ index, content, id }) => {
     const data = await res.json();
     setEditMode(false);
 
-    console.log(data);
     router.refresh();
+    return data;
   }
   return (
-    <div className="bg-transparent border border-slate-400 shadow p-2 rounded-xl flex">
-      {editMode ? <textarea className="w-full bg-transparent text-white   focus:outline-none" value={newContent || content} onChange={(e) => setNewContent(e.target.value)} /> : <div>{content}</div>}
+    <div className="bg-transparent border border-slate-400 shadow text-white p-2 rounded-xl flex justify-between">
+      {editMode ? <textarea className="w-full bg-transparent    focus:outline-none" value={newContent || content} onChange={(e) => setNewContent(e.target.value)} /> : <div className="min-h-[50px]">{content}</div>}
 
-      <div className="space-x-2 flex flex-end">
+      <div className="space-x-2 flex ">
         {editMode ? (
           <button className="btnUpdate" onClick={handleUpdateNote}>
             <CheckCircle />
@@ -49,7 +49,6 @@ export const NoteCard = ({ index, content, id }) => {
           </button>
         )}
 
-        <button className="">Update</button>
         <button className="btnDelete" onClick={handleDeleteNote}>
           <Trash2 />
         </button>

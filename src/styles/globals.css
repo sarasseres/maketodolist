@@ -22,6 +22,6 @@
     @apply text-lightseaGreen;
   }
   .btnUpdate {
-    @apply bg-rose-500;
+    @apply text-rose-500;
   }
 }
