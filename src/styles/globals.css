@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-lightBrown;
+  }
+  input {
+    @apply w-full  p-3 border-2 rounded-lg focus:outline-none shadow;
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply min-w-[400px] p-10 bg-blueBold flex justify-center m-auto flex-col space-y-4 rounded-xl;
+  }
+  .btnEdit {
+    @apply text-lightYellow;
+  }
+  .btnDelete {
+    @apply text-lightseaGreen;
+  }
+  .btnUpdate {
+    @apply bg-rose-500;
+  }
+}
